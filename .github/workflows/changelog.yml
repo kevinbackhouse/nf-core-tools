@@ -4,6 +4,16 @@ on:
     types: [created]  # Add ".changelog" as a PR comment to trigger this workflow.
 
 jobs:
+  debug:
+    steps
+      - name: print
+        env:
+          OWNER: ${{github.repository_owner}}
+          BASEREF: ${{github.event.pull_request.base.ref}}
+        run: |
+          echo OWNER $OWNER
+          echo BASEREF $BASEREF
+
   update_changelog:
     runs-on: ubuntu-latest
     # Run if comment is on a PR with the main repo, and if it contains the magic keywords.
