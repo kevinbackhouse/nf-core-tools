@@ -5,6 +5,8 @@ on:
 
 jobs:
   debug:
+    runs-on: ubuntu-latest
+
     steps:
       - name: print
         env:
