@@ -5,7 +5,7 @@ on:
 
 jobs:
   debug:
-    steps
+    steps:
       - name: print
         env:
           OWNER: ${{github.repository_owner}}
