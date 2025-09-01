@@ -11,10 +11,12 @@ jobs:
       - name: print
         env:
           OWNER: ${{github.repository_owner}}
-          BASEREF: ${{github.base_ref}}
+          BASEREF: ${{github.event.pull_request.base.ref}}
+          GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
           echo OWNER $OWNER
           echo BASEREF $BASEREF
+          echo $GITHUB_CONTEXT
 
   update_changelog:
     runs-on: ubuntu-latest
@@ -23,7 +25,7 @@ jobs:
     if: |
       github.repository_owner == 'kevinbackhouse' &&
       github.event.issue.pull_request &&
-      github.event.base_ref == 'dev'
+      github.event.pull_request.base.ref == 'dev'
 
     steps:
       - name: branch-deploy
