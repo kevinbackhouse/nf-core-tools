@@ -1,7 +1,7 @@
 name: Update CHANGELOG.md
 on:
   issue_comment:
-    types: [created]  # Add ".changelog" as a PR comment to trigger this workflow.
+    types: [created]  # Add "@nf-core-bot changelog" as a PR comment to trigger this workflow.
 
 jobs:
   debug:
@@ -26,7 +26,7 @@ jobs:
         id: branch-deploy
         uses: github/branch-deploy@c9fcc362bdcea69eecac6578dde245cd5e3a55bf # v10.4.3
         with:
-          trigger: ".changelog"
+          trigger: "@nf-core-bot changelog"
           reaction: "eyes"
           stable_branch: "dev"
           deploy_message_path: ".github/workflows/changelog-message.md"
