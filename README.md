@@ -5,6 +5,7 @@
   </picture>
 </h1><!-- omit in toc -->
 
+
 [![Python tests](https://github.com/nf-core/tools/workflows/Python%20tests/badge.svg?branch=main&event=push)](https://github.com/nf-core/tools/actions?query=workflow%3A%22Python+tests%22+branch%3Amain)
 [![codecov](https://codecov.io/gh/nf-core/tools/branch/main/graph/badge.svg)](https://codecov.io/gh/nf-core/tools)
 [![code style: prettier](https://img.shields.io/badge/code%20style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
